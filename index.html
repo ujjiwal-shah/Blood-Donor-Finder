@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donor Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Blood Donor Portal</h1>
+        <button onclick="becomeDonor()">Become a Donor</button>
+        <button onclick="findDonor()">Find a Donor</button>
+    </div>
+
+    <script>
+        function becomeDonor() {
+            window.location.href = 'register.html';
+        }
+
+        function findDonor() {
+            window.location.href = 'landing.html';
+        }
+    </script>
+</body>
+</html>

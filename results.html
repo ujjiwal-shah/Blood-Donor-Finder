@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Results</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Donor Information</h1>
+        <div id="results"></div>
+        <button onclick="goBack()">Back</button>
+    </div>
+
+    <script>
+        function displayDonors() {
+            const resultsDiv = document.getElementById('results');
+            const donorData = JSON.parse(localStorage.getItem('donorData'));
+
+            if (donorData && donorData.length > 0) {
+                resultsDiv.innerHTML = donorData.map(donor => `
+                    <div class="donor-card">
+                        <p><strong>Name:</strong> ${donor.name}<br>
+                        <strong>Contact:</strong> ${donor.contact}</p>
+                    </div>
+                `).join('');
+            } else {
+                resultsDiv.innerHTML = "<p>No donors found.</p>";
+            }
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+        displayDonors();
+    </script>
+</body>
+</html>

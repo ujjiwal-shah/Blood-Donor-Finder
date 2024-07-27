@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donor Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Blood Donor Finder</h1>
+        <div class="search-form">
+            <label for="state">State:</label>
+            <select id="state">
+                <option value="">Select State</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Karnataka">Karnataka</option>
+                <!-- Add more states here -->
+            </select>
+            
+            <label for="city">City:</label>
+            <select id="city">
+                <option value="">Select City</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Bangalore">Bangalore</option>
+                <!-- Add more cities here -->
+            </select>
+            
+            <button onclick="findDonors()">Find Donors</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
